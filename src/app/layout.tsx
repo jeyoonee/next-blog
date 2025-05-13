@@ -43,7 +43,7 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
-        <footer className="flex flex-col">
+        <footer className="flex flex-col fixed top-90">
           <div className="flex">
             <Link href="https://github.com/jeyoonee">Github</Link>
             <Link href="https://github.com/jeyoonee">LinkedIn</Link>
