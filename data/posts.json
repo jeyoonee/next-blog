@@ -1,0 +1,74 @@
+[
+  {
+    "title": "2024 Year in Review",
+    "description": "A summary of the technologies and thoughts I learned throughout 2024",
+    "date": "2024-12-31",
+    "category": "my story",
+    "path": "review-2024",
+    "featured": false
+  },
+  {
+    "title": "JavaScript Basics",
+    "description": "A comprehensive summary from basic syntax to practical usage",
+    "date": "2025-05-08",
+    "category": "javascript",
+    "path": "javascript-basic",
+    "featured": false
+  },
+  {
+    "title": "10 Pro JavaScript Tips!",
+    "description": "10 tips to use JavaScript like a pro",
+    "date": "2024-06-15",
+    "category": "javascript",
+    "path": "javascript-10-tips",
+    "featured": true
+  },
+  {
+    "title": "Node.js Basics",
+    "description": "A summary of the technologies and thoughts I learned throughout 2025",
+    "date": "2024-08-21",
+    "category": "backend",
+    "path": "node-basic",
+    "featured": false
+  },
+  {
+    "title": "2023 Year in Review",
+    "description": "A summary of the technologies and thoughts I learned throughout 2023",
+    "date": "2023-12-31",
+    "category": "my story",
+    "path": "review-2025",
+    "featured": false
+  },
+  {
+    "title": "Pro Node.js Tips",
+    "description": "All the tips you need to use Node.js like a professional",
+    "date": "2025-04-10",
+    "category": "backend",
+    "path": "node-pro-tips",
+    "featured": true
+  },
+  {
+    "title": "React Best Practices!",
+    "description": "Best practices for using React effectively and accurately",
+    "date": "2025-04-15",
+    "category": "frontend",
+    "path": "best-react-practices",
+    "featured": true
+  },
+  {
+    "title": "React 19 Overview!",
+    "description": "A summary of new features added in React 19",
+    "date": "2025-05-02",
+    "category": "frontend",
+    "path": "react19-walkthrough",
+    "featured": true
+  },
+  {
+    "title": "2022 Year in Review",
+    "description": "A summary of the technologies and thoughts I learned throughout 2022",
+    "date": "2022-12-31",
+    "category": "my story",
+    "path": "review-2022",
+    "featured": true
+  }
+]
