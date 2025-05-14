@@ -39,16 +39,19 @@ const responsive = {
 
 export default function Home() {
   return (
-    <div>
-      <p>I'm Jay</p>
-      <Image
-        src="/images/doggy.jpeg"
-        alt="doggy"
-        width={200}
-        height={200}
-        className="rounded-full"
-      />
-      <h1 className="text-[24px] font-bold">Featured Posts</h1>
+    <div className="w-full m-auto">
+      <div className="flex flex-col justify-center items-center mb-10">
+        <Image
+          src="/images/doggy.jpeg"
+          alt="doggy"
+          width={200}
+          height={200}
+          className="rounded-full mb-3"
+        />
+        <h2 className="font-semibold text-[20px]">Jeyoon Jeong</h2>
+        <p>Growth-based frontend engineer</p>
+      </div>
+      <h1 className="text-[24px] font-bold mb-8">Featured Posts</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {featuredData.map((item, id) => (
           <PostPreview data={item} key={id} />

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import Footer from "@/app/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-center px-5`}
       >
-        <header className="text-[#856767] text-[16px] flex justify-between">
-          <Link href="/">Jay's Blog</Link>
+        <header className="text-[#725241] text-[16px] flex justify-between p-5 mb-5">
+          <Link href="/" className="font-bold text-[24px]"></Link>
           <nav>
+            <Link href="/" className="px-2">
+              Home
+            </Link>
             <Link href="/about" className="px-2">
               About
             </Link>
@@ -43,14 +48,7 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
-        <footer className="flex flex-col fixed top-90">
-          <div className="flex">
-            <Link href="https://github.com/jeyoonee">Github</Link>
-            <Link href="https://github.com/jeyoonee">LinkedIn</Link>
-            <Link href="https://github.com/jeyoonee">Instagram</Link>
-          </div>
-          <span>© 2025 JEYOON. ALL RIGHTS RESERVED.</span>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
