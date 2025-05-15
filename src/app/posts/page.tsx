@@ -1,6 +1,7 @@
 "use client";
 
 import Dropdown from "react-dropdown";
+import DropdownSelect from "../components/Dropdown";
 import postData from "../../../data/posts.json";
 import PostPreview from "../components/PostPreview";
 import { PostPreviewData } from "@/types/post";
@@ -18,16 +19,10 @@ export default function Posts() {
   return (
     <>
       <div className="mb-4 w-60">
-        <Dropdown
-          options={options}
-          value={option}
-          onChange={(e) => {
-            setOption(e.value);
-          }}
-        />
+        <DropdownSelect selected={option} onChange={setOption} />
       </div>
       {filteredPosts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5">
           {filteredPosts.map((item, id) => (
             <PostPreview data={item} key={id} />
           ))}
