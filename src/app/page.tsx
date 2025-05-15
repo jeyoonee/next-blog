@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </div>
       <h1 className="text-[24px] font-bold mt-3 p-5">You may like</h1>
-      <div className="px-5">
+      <div className="px-5 mb-10">
         <Carousel
           swipeable={false}
           draggable={true}
@@ -86,7 +86,6 @@ export default function Home() {
             <PostPreview data={item} key={id} />
           ))}
         </Carousel>
-        ;
       </div>
     </div>
   );

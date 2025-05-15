@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.carousel-container {
+  overflow: visible !important;
+  overflow-x: hidden;
+}
+
+.react-multi-carousel-track {
+  overflow-x: hidden;
+}

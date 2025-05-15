@@ -3,7 +3,6 @@
 import Dropdown from "react-dropdown";
 import postData from "../../../data/posts.json";
 import PostPreview from "../components/PostPreview";
-import Image from "next/image";
 import { PostPreviewData } from "@/types/post";
 import { useState } from "react";
 

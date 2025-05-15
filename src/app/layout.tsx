@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <header className="text-[#725241] text-[16px] flex justify-between p-5 mb-5">
           <Link href="/" className="font-bold text-[24px]"></Link>
-          <nav>
+          <nav className="font-semibold">
             <Link href="/" className="px-2">
               Home
             </Link>

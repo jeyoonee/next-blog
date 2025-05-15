@@ -19,6 +19,7 @@ export default async function SlugPage({ params }: Props) {
   try {
     content = fs.readFileSync(filePath, "utf8");
   } catch (err) {
+    console.error(err);
     redirect("/posts");
   }
   const post = await getPost(params.slug);

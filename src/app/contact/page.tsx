@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import * as yup from "yup";
-import { FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
 
 // yup 스키마 정의
 const schema = yup.object().shape({
