@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
 import Footer from "@/app/components/Footer";
 
 const geistSans = Geist({
@@ -28,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-center px-5`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-center px-5 min-h-screen`}
       >
         <header className="text-[#725241] text-[16px] flex justify-between p-5 mb-5">
           <Link href="/" className="font-bold text-[24px]"></Link>
@@ -47,7 +46,7 @@ export default function RootLayout({
             </Link>
           </nav>
         </header>
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

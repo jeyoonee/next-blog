@@ -77,17 +77,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col">
-      <h1>Contact Me</h1>
-      <span>wpdbs4419@gmail.com</span>
-      <div className="flex space-x-2">
-        <FaGithub />
-        <FaLinkedin />
-        <FaYoutube />
-      </div>
-
-      <h2>Or Send me an email</h2>
-
+    <div className="flex flex-col items-center">
+      <h1 className="text-[24px] font-bold text-black mb-5">Contact Me 👋</h1>
       <form
         onSubmit={handleSubmit}
         className="bg-slate-700 flex flex-col w-1/3 mx-auto p-5 space-y-2 mb-3 rounded-xl"

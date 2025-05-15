@@ -48,39 +48,46 @@ export default function Home() {
           height={200}
           className="rounded-full mb-3"
         />
-        <h2 className="font-semibold text-[20px]">Jeyoon Jeong</h2>
-        <p>Growth-based frontend engineer</p>
+        <h2 className="font-semibold text-[20px] mb-2">Jeyoon Jeong</h2>
+        <p>A passionate frontend engineer</p>
       </div>
-      <h1 className="text-[24px] font-bold mb-8">Featured Posts</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {featuredData.map((item, id) => (
-          <PostPreview data={item} key={id} />
-        ))}
+
+      <div className="flex flex-col items-center">
+        <h1 className="text-left w-full text-[24px] font-bold mb-2 px-5">
+          Featured Posts
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5">
+          {featuredData.map((item, id) => (
+            <PostPreview data={item} key={id} />
+          ))}
+        </div>
       </div>
-      <h1 className="text-[24px] font-bold mt-3">You may like</h1>
-      <Carousel
-        swipeable={false}
-        draggable={false}
-        showDots={true}
-        responsive={responsive}
-        ssr={true} // means to render carousel on server-side.
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={2000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        // deviceType={this.props.deviceType}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-      >
-        {mayLikeData.map((item, id) => (
-          <PostPreview data={item} key={id} />
-        ))}
-      </Carousel>
-      ;
+      <h1 className="text-[24px] font-bold mt-3 p-5">You may like</h1>
+      <div className="px-5">
+        <Carousel
+          swipeable={false}
+          draggable={true}
+          showDots={false}
+          responsive={responsive}
+          ssr={true}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={2000}
+          keyBoardControl={true}
+          customTransition="all .5"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          // deviceType={this.props.deviceType}
+          dotListClass="custom-dot-list-style"
+          itemClass="px-3"
+        >
+          {mayLikeData.map((item, id) => (
+            <PostPreview data={item} key={id} />
+          ))}
+        </Carousel>
+        ;
+      </div>
     </div>
   );
 }
