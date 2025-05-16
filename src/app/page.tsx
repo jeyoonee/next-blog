@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import PostPreview from "./components/PostPreview";
 import postData from "../../data/posts.json";
 import { PostPreviewData } from "@/types/post";
 import dynamic from "next/dynamic";
 import "react-multi-carousel/lib/styles.css";
+import Hero from "@/app/components/Hero";
 
 const Carousel = dynamic(() => import("react-multi-carousel"), {
   ssr: false,
@@ -40,18 +40,7 @@ const responsive = {
 export default function Home() {
   return (
     <div className="w-full m-auto">
-      <div className="flex flex-col justify-center items-center mb-10">
-        <Image
-          src="/images/doggy.jpeg"
-          alt="doggy"
-          width={200}
-          height={200}
-          className="rounded-full mb-3"
-        />
-        <h2 className="font-semibold text-[20px] mb-2">Jeyoon Jeong</h2>
-        <p>A passionate frontend engineer</p>
-      </div>
-
+      <Hero />
       <div className="flex flex-col items-center">
         <h1 className="text-left w-full text-[24px] font-bold mb-2 px-5">
           Featured Posts

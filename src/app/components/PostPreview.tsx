@@ -20,7 +20,7 @@ export default function PostPreview({ data }: { data: PostPreviewData }) {
         width={0}
         height={0}
         sizes="100vw"
-        className="w-full h-[165px]"
+        className="w-full"
       />
       <div className="relative p-4 flex flex-col">
         <h2 className="font-bold text-[16px] mb-2">{data.title}</h2>

@@ -1,6 +1,5 @@
 "use client";
 
-import Dropdown from "react-dropdown";
 import DropdownSelect from "../components/Dropdown";
 import postData from "../../../data/posts.json";
 import PostPreview from "../components/PostPreview";
