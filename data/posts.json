@@ -10,7 +10,7 @@
   {
     "title": "JavaScript Basics",
     "description": "A comprehensive summary from basic syntax to practical usage",
-    "date": "2025-05-08",
+    "date": "2024-05-08",
     "category": "javascript",
     "path": "javascript-basic",
     "featured": false
@@ -25,7 +25,7 @@
   },
   {
     "title": "Node.js Basics",
-    "description": "A summary of the technologies and thoughts I learned throughout 2025",
+    "description": "A summary of the technologies and thoughts I learned throughout 2023",
     "date": "2024-08-21",
     "category": "backend",
     "path": "node-basic",
@@ -42,7 +42,7 @@
   {
     "title": "Pro Node.js Tips",
     "description": "All the tips you need to use Node.js like a professional",
-    "date": "2025-04-10",
+    "date": "2023-04-10",
     "category": "backend",
     "path": "node-pro-tips",
     "featured": true
@@ -50,7 +50,7 @@
   {
     "title": "React Best Practices!",
     "description": "Best practices for using React effectively and accurately",
-    "date": "2025-04-15",
+    "date": "2023-04-15",
     "category": "frontend",
     "path": "best-react-practices",
     "featured": true
@@ -58,7 +58,7 @@
   {
     "title": "React 19 Overview!",
     "description": "A summary of new features added in React 19",
-    "date": "2025-05-02",
+    "date": "2023-05-02",
     "category": "frontend",
     "path": "react19-walkthrough",
     "featured": true
