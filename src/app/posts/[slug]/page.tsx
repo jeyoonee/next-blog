@@ -2,14 +2,27 @@ import { getPost } from "@/service/posts";
 import { redirect } from "next/navigation";
 import fs from "fs";
 import path from "path";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import MarkdownViewer from "@/app/components/MarkdownVier";
+import Image from "next/image";
+import { AiTwotoneCalendar } from "react-icons/ai";
+import AdjacentPostCard from "@/app/components/AdjacentPostCard";
+import { Metadata } from "next";
 
 type Props = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const { title, description } = await getPost(slug);
+  return {
+    title,
+    description,
+  };
+}
 
 export default async function SlugPage({ params }: Props) {
   const { slug } = params;
@@ -28,12 +41,31 @@ export default async function SlugPage({ params }: Props) {
     redirect("/posts");
   }
 
+  const { title, date, description, next, prev } = post;
+
   return (
-    <>
-      <h1>{post.title}</h1>
-      <div className="prose max-w-none p-4">
-        <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
-      </div>
-    </>
+    <article className="rounded-2xl overflow-hidden bg-gray-100 shadow-lg ">
+      <Image
+        src={`/images/posts/${post.path}.png`}
+        alt={title}
+        width={760}
+        height={420}
+        className="w-full h-1/5 max-h-[500px]"
+      />
+      <section className="flex flex-col p-4">
+        <div className="flex items-center self-end text-sky-600">
+          <AiTwotoneCalendar />
+          <p className="font-semibold ml-2">{date.toString()}</p>
+        </div>
+        <h1 className="text-4xl font-bold">{title}</h1>
+        <p className="text-xl font-bold">{description}</p>
+        <div className="w-44 border-2 border-sky-600 mt-4 mb-8" />
+        <MarkdownViewer content={content} />
+      </section>
+      <section className="flex shadow-md">
+        {prev && <AdjacentPostCard post={prev} type="prev" />}
+        {next && <AdjacentPostCard post={next} type="next" />}
+      </section>
+    </article>
   );
 }

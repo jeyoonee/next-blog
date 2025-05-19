@@ -1,4 +1,4 @@
-export type PostPreviewData = {
+export type PostData = {
   title: string;
   description: string;
   date: string;

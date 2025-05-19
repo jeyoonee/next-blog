@@ -1,13 +1,13 @@
 "use client";
 
-import { PostPreviewData } from "@/types/post";
+import { PostData } from "@/types/post";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function PostPreview({
   data: { path, description, title },
 }: {
-  data: PostPreviewData;
+  data: PostData;
 }) {
   const router = useRouter();
 

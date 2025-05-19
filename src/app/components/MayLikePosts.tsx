@@ -1,10 +1,10 @@
 import PostPreview from "@/app/components/PostPreview";
-import { PostPreviewData } from "@/types/post";
+import { PostData } from "@/types/post";
 import MultiCarousel from "./MultiCarousel";
 import { getNonFeaturedPosts } from "@/service/posts";
 
 export default async function MayLikePosts() {
-  const mayLikePosts: PostPreviewData[] = await getNonFeaturedPosts();
+  const mayLikePosts: PostData[] = await getNonFeaturedPosts();
 
   return (
     <>

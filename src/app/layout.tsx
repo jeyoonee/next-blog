@@ -9,8 +9,14 @@ const sans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Jeyoon Jeong",
-  description: "Frontend",
+  title: {
+    default: "Jeyoon Jeong",
+    template: "Jeyoon Jeong | %s",
+  },
+  description: "Frontend Engineer Jeyoon",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

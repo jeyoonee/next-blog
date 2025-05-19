@@ -1,9 +1,9 @@
 import PostPreview from "@/app/components/PostPreview";
-import { PostPreviewData } from "@/types/post";
+import { PostData } from "@/types/post";
 import { getFeaturedPosts } from "@/service/posts";
 
 export default async function FeaturedPosts() {
-  const featuredPosts: PostPreviewData[] = await getFeaturedPosts();
+  const featuredPosts: PostData[] = await getFeaturedPosts();
 
   return (
     <section className="flex flex-col items-center">
