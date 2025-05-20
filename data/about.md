@@ -1,4 +1,4 @@
-💻 _Driven Frontend Engineer_ with 2.5 years of experience in building scalable, user-centric web applications using TypeScript. Specialized in responsive UI/UX and cross-functional collaboration.
+💻 _Growth-Driven Frontend Engineer_ with 2.5 years of experience in building scalable, user-centric web applications using TypeScript. Specialized in responsive UI/UX and cross-functional collaboration.
 
 📍 Key Achievements:
 

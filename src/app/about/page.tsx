@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const markdown = `
-💻 *Driven Frontend Engineer* with 2.5 years of experience in building scalable, user-centric web applications using TypeScript. Specialized in responsive UI/UX and cross-functional collaboration.  
+💻 *Growth-Driven Frontend Engineer* with 2.5 years of experience in building scalable, user-centric web applications using TypeScript. Specialized in responsive UI/UX and cross-functional collaboration.  
 <br />
 
 📍 **Key Achievements**

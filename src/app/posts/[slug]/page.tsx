@@ -2,30 +2,31 @@ import { getPost } from "@/service/posts";
 import { redirect } from "next/navigation";
 import fs from "fs";
 import path from "path";
-import MarkdownViewer from "@/app/components/MarkdownVier";
+import MarkdownViewer from "@/app/components/MarkdownViewer";
 import Image from "next/image";
 import { AiTwotoneCalendar } from "react-icons/ai";
 import AdjacentPostCard from "@/app/components/AdjacentPostCard";
 import { Metadata } from "next";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
+type PageProps = Promise<{
+  slug: string;
+}>;
 
 export async function generateMetadata({
-  params: { slug },
-}: Props): Promise<Metadata> {
-  const { title, description } = await getPost(slug);
+  params,
+}: {
+  params: PageProps;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPost(slug);
   return {
-    title,
-    description,
+    title: post?.title ?? "Post",
+    description: post?.description ?? "No description",
   };
 }
 
-export default async function SlugPage({ params }: Props) {
-  const { slug } = params;
+export default async function SlugPage({ params }: { params: PageProps }) {
+  const { slug } = await params;
   const filePath = path.join(process.cwd(), "data", "posts", `${slug}.md`);
   let content = "";
 
@@ -35,7 +36,8 @@ export default async function SlugPage({ params }: Props) {
     console.error(err);
     redirect("/posts");
   }
-  const post = await getPost(params.slug);
+
+  const post = await getPost(slug);
 
   if (!post) {
     redirect("/posts");

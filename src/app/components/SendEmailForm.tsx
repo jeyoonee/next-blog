@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import * as yup from "yup";
+import { ValidationError } from "yup";
 
 const schema = yup.object().shape({
   email: yup
@@ -59,10 +60,10 @@ export default function SendEmailForm() {
       } else {
         setStatus("error");
       }
-    } catch (err: any) {
-      if (err.name === "ValidationError") {
+    } catch (err) {
+      if (err instanceof ValidationError) {
         const newErrors = { email: "", subject: "", message: "" };
-        err.inner.forEach((validationErr: any) => {
+        err.inner.forEach((validationErr) => {
           const path = validationErr.path as "email" | "subject" | "message";
           newErrors[path] = validationErr.message;
         });

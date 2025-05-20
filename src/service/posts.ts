@@ -1,5 +1,5 @@
 import path from "path";
-import { promises as fs, readFile } from "fs";
+import { promises as fs } from "fs";
 import { PostData } from "../types/post";
 import { cache } from "react";
 
