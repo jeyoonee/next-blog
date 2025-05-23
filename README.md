@@ -1,7 +1,9 @@
-# 📝 [Blog](https://next-blog-blush-eight.vercel.app/)  ⬅️ Click!
+# 📝 [Blog](https://next-blog-blush-eight.vercel.app/) 
 
 A modern, responsive blog built with **Next.js**, **TailwindCSS**, and **TypeScript**.  
 This blog features posts about **React**, **JavaScript**, and personal insights as a frontend developer.
+
+🔗 [View Project](https://next-blog-blush-eight.vercel.app/) 
 
 ---
 
